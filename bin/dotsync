@@ -667,7 +667,7 @@ doaction()
 }
 
 # MAIN
-checknotroot
+# checknotroot
 getconfig
 checkdirs
 options "${@}"
