@@ -222,6 +222,7 @@ gitremote()
 
 validhosttype()
 {
+  return
   chktype=$1
   chkhost=$2
   if [ "$chktype" == ANY ]; then
@@ -249,6 +250,7 @@ validhosttype()
 
 validhost()
 {
+  return
   chkhost=$1
   shrthost=$(echo "$chkhost" | awk -F. '{print $1}')
   chk="^($shrthost|$chkhost)"
@@ -667,7 +669,7 @@ doaction()
 }
 
 # MAIN
-checknotroot
+# checknotroot
 getconfig
 checkdirs
 options "${@}"
